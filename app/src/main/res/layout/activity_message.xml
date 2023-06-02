@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C4D2DD"
+    tools:context=".Message">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:weightSum="1">
+
+            <ImageButton
+                android:id="@+id/back_btn"
+                android:layout_width="38dp"
+                android:layout_height="42dp"
+                android:layout_weight="0.1"
+                android:background="@color/purple_200"
+                android:onClick="BackToTheMain"
+                android:padding="15dp"
+                android:src="@drawable/back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.8"
+                android:gravity="center"
+                android:text="Messages"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_weight="0.1"
+                android:padding="14sp"
+                android:src="@drawable/new_msg" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_marginVertical="5dp"
+                    android:background="@color/purple_200"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageButton
+                            android:id="@+id/account_icon"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@color/purple_200"
+                            android:padding="120dp"
+                            android:src="@drawable/person"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_toEndOf="@+id/account_icon"
+                            android:text="melissa17: hahhahahahahha"
+                            android:textColor="#FFFFFF"
+                            android:textStyle="normal" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_marginVertical="5dp"
+                    android:background="@color/purple_200"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageButton
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:id="@+id/account_icon2"
+                            android:background="@color/purple_200"
+                            android:src="@drawable/person"
+                            android:padding="120dp"/>
+
+                        <TextView
+                            android:layout_marginStart="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="you: good night"
+                            android:textColor="#FFFFFF"
+                            android:textStyle="normal"
+                            android:layout_toEndOf="@+id/account_icon2"/>
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_marginVertical="5dp"
+                    android:background="@color/purple_200"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageButton
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:id="@+id/account_icon3"
+                            android:background="@color/purple_200"
+                            android:src="@drawable/person"
+                            android:padding="120dp"/>
+
+                        <TextView
+                            android:layout_marginStart="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="lucas: just forget it"
+                            android:textColor="#FFFFFF"
+                            android:textStyle="normal"
+                            android:layout_toEndOf="@+id/account_icon3"/>
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_marginVertical="5dp"
+                    android:background="@color/purple_200"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageButton
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:id="@+id/account_icon4"
+                            android:background="@color/purple_200"
+                            android:src="@drawable/person"
+                            android:padding="120dp"/>
+
+                        <TextView
+                            android:layout_marginStart="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="nathan_fabray: i thought the same thing"
+                            android:textColor="#FFFFFF"
+                            android:textStyle="normal"
+                            android:layout_toEndOf="@+id/account_icon4"/>
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_marginVertical="5dp"
+                    android:background="@color/purple_200"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageButton
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:id="@+id/account_icon5"
+                            android:background="@color/purple_200"
+                            android:src="@drawable/person"
+                            android:padding="120dp"/>
+
+                        <TextView
+                            android:layout_marginStart="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="mary: okay, see you around"
+                            android:textColor="#FFFFFF"
+                            android:textStyle="normal"
+                            android:layout_toEndOf="@+id/account_icon5"/>
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_marginVertical="5dp"
+                    android:background="@color/purple_200"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageButton
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:id="@+id/account_icon6"
+                            android:background="@color/purple_200"
+                            android:src="@drawable/person"
+                            android:padding="120dp"/>
+
+                        <TextView
+                            android:layout_marginStart="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="felix: i haven't read that book yet, it's in my ..."
+                            android:textColor="#FFFFFF"
+                            android:textStyle="normal"
+                            android:layout_toEndOf="@+id/account_icon6"/>
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_marginVertical="5dp"
+                    android:background="@color/purple_200"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageButton
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:id="@+id/account_icon7"
+                            android:background="@color/purple_200"
+                            android:src="@drawable/person"
+                            android:padding="120dp"/>
+
+                        <TextView
+                            android:layout_marginStart="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="hannah: i heard that they're gonna make a mo..."
+                            android:textColor="#FFFFFF"
+                            android:textStyle="normal"
+                            android:layout_toEndOf="@+id/account_icon7"/>
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_marginVertical="5dp"
+                    android:background="@color/purple_200"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageButton
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:id="@+id/account_icon8"
+                            android:background="@color/purple_200"
+                            android:src="@drawable/person"
+                            android:padding="120dp"/>
+
+                        <TextView
+                            android:layout_marginStart="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="haley: are you gonna come to the library with me?"
+                            android:textColor="#FFFFFF"
+                            android:textStyle="normal"
+                            android:layout_toEndOf="@+id/account_icon8"/>
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_marginVertical="5dp"
+                    android:background="@color/purple_200"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageButton
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:id="@+id/account_icon9"
+                            android:background="@color/purple_200"
+                            android:src="@drawable/person"
+                            android:padding="120dp"/>
+
+                        <TextView
+                            android:layout_marginStart="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="you: thank you for your advise, i will read it asap"
+                            android:textColor="#FFFFFF"
+                            android:textStyle="normal"
+                            android:layout_toEndOf="@+id/account_icon9"/>
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_marginVertical="5dp"
+                    android:background="@color/purple_200"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageButton
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:id="@+id/account_icon10"
+                            android:background="@color/purple_200"
+                            android:src="@drawable/person"
+                            android:padding="120dp"/>
+
+                        <TextView
+                            android:layout_marginStart="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+
+                            android:text="luke07: i can't believe you actually said that :O"
+                            android:textColor="#FFFFFF"
+                            android:textStyle="normal"
+                            android:layout_toEndOf="@+id/account_icon10"/>
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_marginVertical="5dp"
+                    android:background="@color/purple_200"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageButton
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:id="@+id/account_icon11"
+                            android:background="@color/purple_200"
+                            android:src="@drawable/person"
+                            android:padding="120dp"/>
+
+                        <TextView
+                            android:layout_marginStart="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="emma_leclerc: where did you get this book, i couldn't find it."
+                            android:textColor="#FFFFFF"
+                            android:textStyle="normal"
+                            android:layout_toEndOf="@+id/account_icon11"/>
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</FrameLayout>

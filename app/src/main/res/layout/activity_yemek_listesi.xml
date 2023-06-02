@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".YemekListesi">
+
+    <EditText
+        android:id="@+id/lunchText4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="29dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:text="Tavuk-Pilav-Yoğurt"
+        app:layout_constraintBottom_toTopOf="@+id/description"
+        app:layout_constraintEnd_toEndOf="@+id/divider3"
+        app:layout_constraintTop_toBottomOf="@+id/divider3" />
+
+    <EditText
+        android:id="@+id/lunchText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginBottom="18dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:text="Brokoli Çorbası-Mantı"
+        app:layout_constraintBottom_toTopOf="@+id/lunch2"
+        app:layout_constraintStart_toStartOf="@+id/divider2"
+        app:layout_constraintTop_toBottomOf="@+id/divider2" />
+
+    <EditText
+        android:id="@+id/descriptionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginBottom="50dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:text="Yemeklerimiz gluten içermemektedir."
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/divider4"
+        app:layout_constraintTop_toBottomOf="@+id/description" />
+
+    <TextView
+        android:id="@+id/breakfast2"
+        android:layout_width="101dp"
+        android:layout_height="0dp"
+
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:text="Kahvaltı"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/decrease2" />
+
+    <Button
+        android:id="@+id/increase"
+        android:layout_width="0dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="94dp"
+        android:layout_marginTop="56dp"
+        android:text="-"
+        app:layout_constraintBottom_toTopOf="@+id/decrease2"
+        app:layout_constraintEnd_toStartOf="@+id/editTextDate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/decrease2"
+        android:layout_width="0dp"
+        android:layout_height="49dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="56dp"
+        android:text="+"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editTextDate"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextDate"
+        android:layout_width="102dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="1dp"
+        android:ems="10"
+        android:inputType="date"
+        android:text="2023-06-01"
+        app:layout_constraintBottom_toBottomOf="@+id/decrease2"
+        app:layout_constraintEnd_toStartOf="@+id/decrease2"
+        app:layout_constraintStart_toEndOf="@+id/increase"
+        app:layout_constraintTop_toTopOf="@+id/increase"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/lunch"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="Öğle"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/divider2"
+        app:layout_constraintEnd_toEndOf="@+id/lunch2"
+        app:layout_constraintStart_toStartOf="@+id/lunch2"
+        app:layout_constraintTop_toBottomOf="@+id/breakfastText" />
+
+    <TextView
+        android:id="@+id/lunch2"
+        android:layout_width="101dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="Akşam"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/divider3"
+        app:layout_constraintEnd_toEndOf="@+id/divider3"
+        app:layout_constraintStart_toStartOf="@+id/divider3"
+        app:layout_constraintTop_toBottomOf="@+id/lunchText" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="15dp"
+        android:gravity="center"
+        android:text="Açıklama"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/descriptionText"
+        app:layout_constraintEnd_toEndOf="@+id/lunch2"
+        app:layout_constraintStart_toStartOf="@+id/lunch2"
+        app:layout_constraintTop_toBottomOf="@+id/lunchText4" />
+
+    <EditText
+        android:id="@+id/breakfastText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginBottom="21dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:text="Simit-Zeytin-Peynir"
+        app:layout_constraintBottom_toTopOf="@+id/lunch"
+        app:layout_constraintStart_toStartOf="@+id/divider"
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="3dp"
+        android:layout_marginStart="62dp"
+        android:layout_marginEnd="62dp"
+        android:background="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/breakfastText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/breakfast2" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="0dp"
+        android:layout_height="3dp"
+        android:layout_marginStart="62dp"
+        android:layout_marginEnd="62dp"
+        android:layout_marginBottom="13dp"
+        android:background="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/lunchText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lunch" />
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="0dp"
+        android:layout_height="3dp"
+        android:layout_marginStart="66dp"
+        android:layout_marginEnd="66dp"
+        android:background="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/lunchText4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lunch2" />
+
+    <View
+        android:id="@+id/divider4"
+        android:layout_width="0dp"
+        android:layout_height="3dp"
+        android:layout_marginStart="62dp"
+        android:layout_marginEnd="62dp"
+        android:background="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/description" />
+</androidx.constraintlayout.widget.ConstraintLayout>

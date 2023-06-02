@@ -1,4 +1,4 @@
-package com.yasemintoraman.nursinghomeapp;
+package com.example.myapplication;
 
 import org.junit.Test;
 
