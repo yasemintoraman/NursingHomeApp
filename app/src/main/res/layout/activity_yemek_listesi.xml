@@ -4,55 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".YemekListesi">
+    tools:context=".view.YemekListesiUpload">
 
-    <EditText
-        android:id="@+id/lunchText4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="31dp"
-        android:layout_marginBottom="29dp"
-        android:ems="10"
-        android:gravity="start|top"
-        android:inputType="textMultiLine"
-        android:text="Tavuk-Pilav-Yoğurt"
-        app:layout_constraintBottom_toTopOf="@+id/description"
-        app:layout_constraintEnd_toEndOf="@+id/divider3"
-        app:layout_constraintTop_toBottomOf="@+id/divider3" />
-
-    <EditText
-        android:id="@+id/lunchText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="37dp"
-        android:layout_marginBottom="18dp"
-        android:ems="10"
-        android:gravity="start|top"
-        android:inputType="textMultiLine"
-        android:text="Brokoli Çorbası-Mantı"
-        app:layout_constraintBottom_toTopOf="@+id/lunch2"
-        app:layout_constraintStart_toStartOf="@+id/divider2"
-        app:layout_constraintTop_toBottomOf="@+id/divider2" />
-
-    <EditText
-        android:id="@+id/descriptionText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="37dp"
-        android:layout_marginBottom="50dp"
-        android:ems="10"
-        android:gravity="start|top"
-        android:inputType="textMultiLine"
-        android:text="Yemeklerimiz gluten içermemektedir."
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/divider4"
-        app:layout_constraintTop_toBottomOf="@+id/description" />
 
     <TextView
         android:id="@+id/breakfast2"
-        android:layout_width="101dp"
-        android:layout_height="0dp"
-
+        android:layout_width="112dp"
+        android:layout_height="39dp"
         android:layout_marginBottom="5dp"
         android:gravity="center"
         android:text="Kahvaltı"
@@ -61,77 +19,38 @@
         app:layout_constraintBottom_toTopOf="@+id/divider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/decrease2" />
-
-    <Button
-        android:id="@+id/increase"
-        android:layout_width="0dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="94dp"
-        android:layout_marginTop="56dp"
-        android:text="-"
-        app:layout_constraintBottom_toTopOf="@+id/decrease2"
-        app:layout_constraintEnd_toStartOf="@+id/editTextDate"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
-    <Button
-        android:id="@+id/decrease2"
+    <View
+        android:id="@+id/divider3"
         android:layout_width="0dp"
-        android:layout_height="49dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginBottom="56dp"
-        android:text="+"
+        android:layout_height="3dp"
+        android:layout_marginStart="66dp"
+        android:layout_marginEnd="66dp"
+        android:background="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/lunchText4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/editTextDate"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lunch2" />
 
     <EditText
-        android:id="@+id/editTextDate"
-        android:layout_width="102dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="1dp"
+        android:id="@+id/descriptionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="50dp"
         android:ems="10"
-        android:inputType="date"
-        android:text="2023-06-01"
-        app:layout_constraintBottom_toBottomOf="@+id/decrease2"
-        app:layout_constraintEnd_toStartOf="@+id/decrease2"
-        app:layout_constraintStart_toEndOf="@+id/increase"
-        app:layout_constraintTop_toTopOf="@+id/increase"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/lunch"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:gravity="center"
-        android:text="Öğle"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/divider2"
-        app:layout_constraintEnd_toEndOf="@+id/lunch2"
-        app:layout_constraintStart_toStartOf="@+id/lunch2"
-        app:layout_constraintTop_toBottomOf="@+id/breakfastText" />
-
-    <TextView
-        android:id="@+id/lunch2"
-        android:layout_width="101dp"
-        android:layout_height="0dp"
-        android:gravity="center"
-        android:text="Akşam"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/divider3"
-        app:layout_constraintEnd_toEndOf="@+id/divider3"
-        app:layout_constraintStart_toStartOf="@+id/divider3"
-        app:layout_constraintTop_toBottomOf="@+id/lunchText" />
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/divider4"
+        app:layout_constraintTop_toBottomOf="@+id/description" />
 
     <TextView
         android:id="@+id/description"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="108dp"
+        android:layout_height="53dp"
         android:layout_marginBottom="15dp"
         android:gravity="center"
         android:text="Açıklama"
@@ -139,22 +58,9 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/descriptionText"
         app:layout_constraintEnd_toEndOf="@+id/lunch2"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/lunch2"
         app:layout_constraintTop_toBottomOf="@+id/lunchText4" />
-
-    <EditText
-        android:id="@+id/breakfastText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="37dp"
-        android:layout_marginBottom="21dp"
-        android:ems="10"
-        android:gravity="start|top"
-        android:inputType="textMultiLine"
-        android:text="Simit-Zeytin-Peynir"
-        app:layout_constraintBottom_toTopOf="@+id/lunch"
-        app:layout_constraintStart_toStartOf="@+id/divider"
-        app:layout_constraintTop_toBottomOf="@+id/divider" />
 
     <View
         android:id="@+id/divider"
@@ -165,6 +71,7 @@
         android:background="#000000"
         app:layout_constraintBottom_toTopOf="@+id/breakfastText"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/breakfast2" />
 
@@ -178,20 +85,50 @@
         android:background="#000000"
         app:layout_constraintBottom_toTopOf="@+id/lunchText"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lunch" />
 
-    <View
-        android:id="@+id/divider3"
-        android:layout_width="0dp"
-        android:layout_height="3dp"
-        android:layout_marginStart="66dp"
-        android:layout_marginEnd="66dp"
-        android:background="#000000"
-        app:layout_constraintBottom_toTopOf="@+id/lunchText4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lunch2" />
+    <TextView
+        android:id="@+id/lunch"
+        android:layout_width="106dp"
+        android:layout_height="44dp"
+        android:gravity="center"
+        android:text="Öğle"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/divider2"
+        app:layout_constraintEnd_toEndOf="@+id/lunch2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/lunch2"
+        app:layout_constraintTop_toBottomOf="@+id/breakfastText" />
+
+    <TextView
+        android:id="@+id/lunch2"
+        android:layout_width="109dp"
+        android:layout_height="51dp"
+        android:gravity="center"
+        android:text="Akşam"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/divider3"
+        app:layout_constraintEnd_toEndOf="@+id/divider3"
+        app:layout_constraintHorizontal_bias="0.467"
+        app:layout_constraintStart_toStartOf="@+id/divider3"
+        app:layout_constraintTop_toBottomOf="@+id/lunchText" />
+
+    <EditText
+        android:id="@+id/breakfastText"
+        android:layout_width="215dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="21dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toTopOf="@+id/lunch"
+        app:layout_constraintStart_toStartOf="@+id/divider"
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
 
     <View
         android:id="@+id/divider4"
@@ -202,6 +139,46 @@
         android:background="#000000"
         app:layout_constraintBottom_toBottomOf="@+id/description"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/description" />
+        app:layout_constraintTop_toBottomOf="@+id/description"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/lunchText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="21dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toTopOf="@+id/lunch2"
+        app:layout_constraintStart_toStartOf="@+id/divider2"
+        app:layout_constraintTop_toBottomOf="@+id/divider2" />
+
+
+    <EditText
+        android:id="@+id/lunchText4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="29dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toTopOf="@+id/description"
+        app:layout_constraintEnd_toEndOf="@+id/divider3"
+        app:layout_constraintTop_toBottomOf="@+id/divider3" />
+
+    <Button
+        android:id="@+id/kaydet"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:onClick="yemekKaydetButtonClicked"
+        android:text="EKLE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionText" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -18,7 +18,7 @@ import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.myapplication.databinding.ActivityUploadBinding;
+import com.example.myapplication.databinding.ActivityDuyurularBinding;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
@@ -34,7 +34,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.UUID;
 
-public class UploadActivity extends AppCompatActivity {
+public class DuyurularActivity extends AppCompatActivity {
 
     Bitmap selectedImage;
     private FirebaseStorage firebaseStorage;
@@ -44,15 +44,16 @@ public class UploadActivity extends AppCompatActivity {
     Uri imageData;
     ActivityResultLauncher<Intent> activityResultLauncher;
     ActivityResultLauncher<String> permissionLauncher;
-    private ActivityUploadBinding binding;
+    private ActivityDuyurularBinding binding;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityUploadBinding.inflate(getLayoutInflater());
+        binding = ActivityDuyurularBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
         setContentView(view);
-        //setContentView(R.layout.activity_upload);
         registerLauncher();
 
         firebaseStorage = FirebaseStorage.getInstance();
@@ -69,7 +70,7 @@ public class UploadActivity extends AppCompatActivity {
 
             //universal unique id
             UUID uuid = UUID.randomUUID();
-            final String imageName = "images/" + uuid + ".jpg";
+            final String imageName = "duyurularimages/" + uuid + ".jpg";
 
             storageReference.child(imageName).putFile(imageData).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                 @Override
@@ -81,7 +82,7 @@ public class UploadActivity extends AppCompatActivity {
                         public void onSuccess(Uri uri) {
                             String downloadUrl = uri.toString();
 
-                            String comment = binding.commentText.getText().toString();
+                            String duyuru = binding.duyuruText.getText().toString();
 
                             FirebaseUser user = auth.getCurrentUser(); //giris yapan kullanici bilgilerindeki email
                             String email = user.getEmail();
@@ -89,13 +90,13 @@ public class UploadActivity extends AppCompatActivity {
                             HashMap<String, Object> postData = new HashMap<>();
                             postData.put("useremail",email);
                             postData.put("downloadurl",downloadUrl);
-                            postData.put("comment", comment);
+                            postData.put("duyuru", duyuru);
                             postData.put("date", FieldValue.serverTimestamp());
 
-                            firebaseFirestore.collection("Posts").add(postData).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                            firebaseFirestore.collection("Duyurular").add(postData).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                                 @Override
                                 public void onSuccess(DocumentReference documentReference) {
-                                    Intent intent = new Intent(UploadActivity.this,FeedActivity.class);
+                                    Intent intent = new Intent(DuyurularActivity.this, Feed2Activity.class);
                                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                     startActivity(intent);
 
@@ -103,7 +104,7 @@ public class UploadActivity extends AppCompatActivity {
                             }).addOnFailureListener(new OnFailureListener() {
                                 @Override
                                 public void onFailure(@NonNull Exception e) {
-                                    Toast.makeText(UploadActivity.this, e.getLocalizedMessage().toString(), Toast.LENGTH_LONG).show();
+                                    Toast.makeText(DuyurularActivity.this, e.getLocalizedMessage().toString(), Toast.LENGTH_LONG).show();
                                 }
                             });
                         }
@@ -112,7 +113,7 @@ public class UploadActivity extends AppCompatActivity {
             }).addOnFailureListener(new OnFailureListener() {
                 @Override
                 public void onFailure(@NonNull Exception e) {
-                    Toast.makeText(UploadActivity.this,e.getLocalizedMessage().toString(),Toast.LENGTH_LONG).show();
+                    Toast.makeText(DuyurularActivity.this,e.getLocalizedMessage().toString(),Toast.LENGTH_LONG).show();
 
                 }
             });
@@ -138,12 +139,12 @@ public class UploadActivity extends AppCompatActivity {
                                 // Seçilen görüntüyü işle
                                 try {
                                     if (Build.VERSION.SDK_INT >= 28) {
-                                        ImageDecoder.Source source = ImageDecoder.createSource(UploadActivity.this.getContentResolver(), imageData);
+                                        ImageDecoder.Source source = ImageDecoder.createSource(DuyurularActivity.this.getContentResolver(), imageData);
                                         selectedImage = ImageDecoder.decodeBitmap(source);
-                                        binding.imageView.setImageBitmap(selectedImage);
+                                        binding.imageView2.setImageBitmap(selectedImage);
                                     } else {
-                                        selectedImage = MediaStore.Images.Media.getBitmap(UploadActivity.this.getContentResolver(), imageData);
-                                        binding.imageView.setImageBitmap(selectedImage);
+                                        selectedImage = MediaStore.Images.Media.getBitmap(DuyurularActivity.this.getContentResolver(), imageData);
+                                        binding.imageView2.setImageBitmap(selectedImage);
                                     }
                                 } catch (IOException e) {
                                     e.printStackTrace();
@@ -153,6 +154,5 @@ public class UploadActivity extends AppCompatActivity {
                     }
                 });
     }
-
 
 }

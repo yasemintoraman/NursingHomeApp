@@ -7,7 +7,10 @@ import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.myapplication.view.Feed2Activity;
 import com.example.myapplication.view.FeedActivity;
+import com.example.myapplication.view.IlacBilgileri;
+import com.example.myapplication.view.YemekListesiUpload;
 
 public class first_screen extends AppCompatActivity {
 
@@ -38,7 +41,7 @@ public class first_screen extends AppCompatActivity {
         yemek_listesi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent_yemek = new Intent(first_screen.this, YemekListesi.class);
+                Intent intent_yemek = new Intent(first_screen.this, YemekListesiUpload.class);
                 startActivity(intent_yemek);
             }
         });
@@ -47,7 +50,7 @@ public class first_screen extends AppCompatActivity {
         duyurular.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent_duyurular = new Intent(first_screen.this, Duyurular.class);
+                Intent intent_duyurular = new Intent(first_screen.this, Feed2Activity.class);
                 startActivity(intent_duyurular);
             }
         });
@@ -57,7 +60,7 @@ public class first_screen extends AppCompatActivity {
         ilac_takibi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent2 = new Intent(first_screen.this,IlacTakibi.class);
+                Intent intent2 = new Intent(first_screen.this, IlacBilgileri.class);
                 startActivity(intent2);
             }
         });
@@ -70,5 +73,7 @@ public class first_screen extends AppCompatActivity {
                 startActivity(intent3);
             }
         });
+
+
     }
 }

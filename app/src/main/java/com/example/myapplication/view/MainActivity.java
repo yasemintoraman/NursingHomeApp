@@ -32,12 +32,6 @@ public class MainActivity extends AppCompatActivity {
 
         FirebaseUser user = auth.getCurrentUser();
 
-        /* if(user != null){  //giris yapildiysa tekrar giris yapilmasina gerek kalmasin diye
-            Intent intent = new Intent(MainActivity.this, first_screen.class);
-            startActivity(intent);
-            finish();
-        }*/
-
     }
 
     //giris yap

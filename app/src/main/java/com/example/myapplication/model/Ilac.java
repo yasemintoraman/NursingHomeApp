@@ -4,17 +4,20 @@ import java.util.Date;
 
 public class Ilac {
 
-    private Date tarih;
-    private String ilacAdi;
-    private String ilacSaati;
-    private String aciklama;
-    private int verilecekGun;
+    public String email;
+    public Date tarih;
+    public String ilacAdi;
+    public String ilacSaati;
+    public String aciklama;
+    public String gun;
 
-    public Ilac(Date tarih, String ilacAdi, String ilacSaati, String aciklama, int verilecekGun) {
-        this.tarih = tarih;
+    public Ilac(String aciklama,String ilacAdi,String email, String gun,String ilacSaati) {
+        this.email = email;
         this.ilacAdi = ilacAdi;
-        this.ilacSaati = ilacSaati;
         this.aciklama = aciklama;
-        this.verilecekGun = verilecekGun;
+        this.ilacSaati = ilacSaati;
+        this.gun = gun;
+
     }
+
 }

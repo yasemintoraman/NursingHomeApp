@@ -1,10 +1,5 @@
 package com.example.myapplication.view;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -13,10 +8,15 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+
 import com.example.myapplication.R;
 import com.example.myapplication.adapter.PostAdapter;
 import com.example.myapplication.databinding.ActivityFeedBinding;
-import com.example.myapplication.databinding.ActivityUploadBinding;
+import com.example.myapplication.first_screen;
 import com.example.myapplication.model.Post;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -112,7 +112,10 @@ public class FeedActivity extends AppCompatActivity {
             startActivity(intentToMain);
             finish();
 
-        }
+        } else if(item.getItemId() == R.id.geri){
+        Intent intentToBack = new Intent(FeedActivity.this, first_screen.class);
+        startActivity(intentToBack);
+    }
 
         return super.onOptionsItemSelected(item);
     }

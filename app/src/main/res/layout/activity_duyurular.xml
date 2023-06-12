@@ -1,68 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    tools:context=".view.DuyurularActivity">
 
-    <!-- Başlık -->
-    <TextView
-        android:id="@+id/textViewTitle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:text="Duyurular"
+    <EditText
+        android:id="@+id/duyuruText"
+        android:layout_width="314dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginBottom="38dp"
+        android:ems="21"
+        android:hint="Duyurunuzu Yazınız"
+        android:inputType="textPersonName"
         android:textAlignment="center"
-        android:textColor="#EA1717"
-        android:textSize="34sp"
-        android:textStyle="bold" />
+        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.235"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.193" />
 
-    <!-- Duyuru 1 -->
-    <TextView
-        android:id="@+id/textViewAnnouncement1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:text="- YARIN TİYATRO ETKİNLİĞİMİZ BULUNMAKTADIR :) "
-        android:textColor="#3F51B5"
-        android:layout_marginTop="40dp"
-        android:textSize="20sp" />
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="316dp"
+        android:layout_height="210dp"
+        android:onClick="selectImage"
+        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/duyuruText"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/selectimage" />
 
-    <!-- Duyuru 2 -->
-    <TextView
-        android:id="@+id/textViewAnnouncement2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:text="- 2GÜN SONRA DOKTOR KONTROLLERİ YAPILACAKTIR!!!"
-        android:layout_marginTop="40dp"
-        android:textColor="#C83131"
-        android:textSize="20sp" />
-
-    <!-- Duyuru 3 -->
-    <TextView
-        android:id="@+id/textViewAnnouncement3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:text="- ATATÜRK ORMAN ÇİFTLİĞİNE GEZİ DÜZENLENECEKTİR"
-        android:layout_marginTop="40dp"
-        android:textColor="#20C8B8"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-
-    <!-- Daha fazla duyuru eklenebilir... -->
-
-    <TextView
-        android:id="@+id/textViewAnnouncement4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:padding="16dp"
-        android:text="- EN KISA SÜREDE TÜRK HALK MÜZİĞİ KONSERİNE GİDİLECEKTİR."
-        android:textColor="#B042C3"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-
-
-
-</LinearLayout>
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="126dp"
+        android:layout_height="61dp"
+        android:onClick="uploadButtonClicked"
+        android:text="Upload"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+</androidx.constraintlayout.widget.ConstraintLayout>
